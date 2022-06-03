@@ -1,32 +1,31 @@
 package pages;
 
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProductPage extends BasePage {
-    @FindBy(xpath = "//*[contains(@class, 'buy-button button button--with-icon button--green button--medium ng-star-inserted')]")
-    private WebElement cartButton;
+    @AndroidFindBy(id = "ua.com.rozetka.shop:id/bottom_bar_btn_buy")
+    private MobileElement cartButton;
 
-    @FindBy(xpath = "//*[contains(@class, 'header-actions__item header-actions__item--cart')]//button")
-    private WebElement cartIcon;
 
     public ProductPage() {
         super();
     }
 
     @Step("Click add to cart button")
-    public ProductPage clickCartButton() {
+    public ContactDataPage clickCartButton() {
         wait.until(ExpectedConditions.visibilityOf(cartButton))
                 .click();
-        return this;
+        return new ContactDataPage();
     }
 
-    @Step("Get info from cart icon")
-    public String getCartIconInfo() {
-        return wait.until(ExpectedConditions.visibilityOf(cartIcon))
-                .getText();
+
+    public boolean isPageLoad() {
+        return wait.until(ExpectedConditions.visibilityOf(cartButton))
+                .isDisplayed();
     }
+
 
 }

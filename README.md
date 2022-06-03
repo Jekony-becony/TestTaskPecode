@@ -1,7 +1,8 @@
 # Test task
 
 Test Task for some company(Contains of 2 ui tests and 1 api test)<br />
-Link to the result video: https://drive.google.com/file/d/1yaOrLfoEcZdIL_rf9mMV8S_wiI1pTXvl/view?usp=sharing
+Link to the result video: https://drive.google.com/file/d/16gsCXjxPJk_vivFN8mPjVu_8waBJRFdp/view?usp=sharing
+
 ###### What to start with:
 
 1. Install environment and tools from corresponded block below
@@ -13,16 +14,15 @@ Link to the result video: https://drive.google.com/file/d/1yaOrLfoEcZdIL_rf9mMV8
    <br/>2.5. Lombok
 3. Install Appium and Android Studio
 4. In properties files you can edit some configuration
-Default config:
-<br/>4.1. url=http://127.0.0.1:4723/wd/hub
-<br/>4.2. device_name=Pixel_2_API_29
-<br/>4.3. platform_Version=10.0.0
-<br/>4.4. avd_Android=Pixel_2_API_29
-<br/>4.5. automation_name=UIAutomator2
-<br/>4.6. platform_name=Android
+   Default config:
+   <br/>4.1. url=http://127.0.0.1:4723/wd/hub
+   <br/>4.2. device_name=Pixel_2_API_29
+   <br/>4.3. platform_Version=10.0.0
+   <br/>4.4. avd_Android=Pixel_2_API_29
+   <br/>4.5. automation_name=UIAutomator2
+   <br/>4.6. platform_name=Android
 
 ###### Project structure:
-
 
 ```
 src - directory with project sources

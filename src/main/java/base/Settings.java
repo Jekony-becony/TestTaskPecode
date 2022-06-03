@@ -1,11 +1,10 @@
 package base;
 
-import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+
+import java.io.File;
 
 import static io.appium.java_client.remote.MobileCapabilityType.AUTOMATION_NAME;
 import static io.appium.java_client.remote.MobileCapabilityType.PLATFORM_VERSION;
@@ -16,7 +15,9 @@ public class Settings {
 
     protected DesiredCapabilities getCapabilities() {
         DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setCapability("chromeOptions", ImmutableMap.of("w3c", false));
+        String APP = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" +
+                File.separator + "java" + File.separator + "resources" + File.separator + getAndroidDeviceConfig().apkPath();
+        dc.setCapability(MobileCapabilityType.APP, APP);
         dc.setCapability(MobileCapabilityType.DEVICE_NAME, getAndroidDeviceConfig().deviceName());
         dc.setCapability(AUTOMATION_NAME, getAndroidDeviceConfig().automationName());
         dc.setCapability(PLATFORM_NAME, getAndroidDeviceConfig().platformName());
@@ -24,8 +25,8 @@ public class Settings {
         dc.setCapability(AndroidMobileCapabilityType.AVD, getAndroidDeviceConfig().avdAndroid());
         dc.setCapability("enableMultiWindows", true);
         dc.setCapability("autoGrantPermissions", true);
-        dc.setCapability(CapabilityType.BROWSER_NAME, "Chrome");
-        dc.setCapability(CapabilityType.BROWSER_VERSION, "96.0.4664.104");
+        dc.setCapability("appPackage", "ua.com.rozetka.shop");
+        dc.setCapability("appActivity", "ua.com.rozetka.shop.screen.MainActivity");
 
         return dc;
     }

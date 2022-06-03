@@ -19,4 +19,8 @@ public interface AndroidDeviceConfig extends Config {
 
     @Key("platform_name")
     String platformName();
+
+    @DefaultValue("rozetka_5.30.0.apk")
+    @Key("apk_Path")
+    String apkPath();
 }

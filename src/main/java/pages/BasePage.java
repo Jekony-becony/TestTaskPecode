@@ -2,13 +2,13 @@ package pages;
 
 import base.Driver;
 import base.SwipeScreen;
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
-    protected WebDriver driver;
+    protected AppiumDriver driver;
     protected WebDriverWait wait;
     protected SwipeScreen swipeScreen;
 
