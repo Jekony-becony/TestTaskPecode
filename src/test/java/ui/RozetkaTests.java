@@ -11,7 +11,7 @@ public class RozetkaTests extends UiBaseTest {
     public void addingProductToTheCart() {
         mainPage.closeBanner()
                 .clickSearchField()
-                .fillSearchField("Подушка обнимашка дакимакура")
+                .fillSearchField("РџРѕРґСѓС€РєР° РѕР±РЅРёРјР°С€РєР° РґР°РєРёРјР°РєСѓСЂР°")
                 .startSearch()
                 .clickElementByIndex(0)
                 .clickCartButton()
@@ -25,7 +25,7 @@ public class RozetkaTests extends UiBaseTest {
                 .clickPlumbingRepairButton()
                 .clickBathButton();
 
-        assertTrue(productListPage.checkElementsCount(10, "Ванна"));
+        assertTrue(productListPage.checkElementsCount(10, "Р’Р°РЅРЅР°"));
     }
 
 
