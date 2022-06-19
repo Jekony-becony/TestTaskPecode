@@ -1,14 +1,15 @@
 package base;
 
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import lombok.extern.slf4j.Slf4j;
 
-import static utils.MainCoreDataManager.getDeviceCommonConfig;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import lombok.extern.slf4j.Slf4j;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 
 @Slf4j
 public class Driver {
-    private AppiumDriver driver;
+    private WebDriver driver;
     private static Driver instance;
 
     private Driver() {
@@ -21,19 +22,19 @@ public class Driver {
     }
 
     public Driver setWebDriver() {
-        Settings settings = new Settings();
-        driver = new AndroidDriver<>(getDeviceCommonConfig().url(), settings.getCapabilities());
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         log.info("base.Driver initialized successfully");
         return this;
     }
 
-    public AppiumDriver getWebDriver() {
+    public WebDriver getWebDriver() {
         return driver;
     }
 
     public void deleteWebDriver() {
         if (driver != null) {
-            driver.closeApp();
+            driver.quit();
             log.info("base.Driver deleted successfully");
         } else {
             log.info("base.Driver is already deleted");

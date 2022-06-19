@@ -1,26 +1,23 @@
 # Test task
 
-Test Task for some company(Contains of 2 ui tests and 1 api test)<br />
-Link to the result video: https://drive.google.com/file/d/16gsCXjxPJk_vivFN8mPjVu_8waBJRFdp/view?usp=sharing
+Test Task for some company(Contains of 5 ui tests(1 failed))<br />
+Link to the result video: https://drive.google.com/file/d/1F397KR1Xq5vDhDsbFZ_Rnh2aCIGBeBIw/view?usp=sharing
 
 ###### What to start with:
 
 1. Install environment and tools from corresponded block below
 2. You should use such libraries:
    <br/>2.1. TestNg
-   <br/>2.2. Appium
+   <br/>2.2. WebDriverManager
    <br/>2.3. Selenium
    <br/>2.4. Allure
    <br/>2.5. Lombok
-3. Install Appium and Android Studio
+   <br/>2.6. Aeonbits
 4. In properties files you can edit some configuration
-   Default config:
-   <br/>4.1. url=http://127.0.0.1:4723/wd/hub
-   <br/>4.2. device_name=Pixel_2_API_29
-   <br/>4.3. platform_Version=10.0.0
-   <br/>4.4. avd_Android=Pixel_2_API_29
-   <br/>4.5. automation_name=UIAutomator2
-   <br/>4.6. platform_name=Android
+   <br/>Default config:
+   <br/>4.1. username=username
+   <br/>4.2. password=password
+   <br/>4.3. allure.results.directory=target/allure-results
 
 ###### Project structure:
 
@@ -28,16 +25,13 @@ Link to the result video: https://drive.google.com/file/d/16gsCXjxPJk_vivFN8mPjV
 src - directory with project sources
     main - directory for project main infrastructure
         java
-            api  - package for work with api
             base - base ui 
-            models - models to work with gson(for api)
             pages - page object classes
             resources - main resources
             utils - utils
         
     test - directory for tests infrastructure
         java
-            api - api tests
             ui - ui tests
             resources - tests resources
         
