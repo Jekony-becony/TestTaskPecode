@@ -1,16 +1,13 @@
 package utils;
 
 public class MainCoreDataManager extends DataManager {
-    private static CommonConfig deviceCommonConfig;
-    private static AndroidDeviceConfig androidDeviceConfig;
+    private static DataConfig DataConfig;
 
 
-    public static CommonConfig getDeviceCommonConfig() {
-        return getConfigData(deviceCommonConfig, CommonConfig.class);
+    public static DataConfig getDataConfig() {
+        return getConfigData(DataConfig, DataConfig.class);
     }
 
-    public static AndroidDeviceConfig getAndroidDeviceConfig() {
-        return getConfigData(androidDeviceConfig, AndroidDeviceConfig.class);
-    }
 }
+
 

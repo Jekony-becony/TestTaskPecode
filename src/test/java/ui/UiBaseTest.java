@@ -1,26 +1,32 @@
 package ui;
 
 import base.Driver;
-import io.appium.java_client.AppiumDriver;
 import lombok.extern.slf4j.Slf4j;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-import pages.MainPage;
-import pages.ProductListPage;
+import pages.AuthorizationPage;
+
+import static utils.MainCoreDataManager.getDataConfig;
+
 
 @Slf4j
 public abstract class UiBaseTest {
-    AppiumDriver driver;
+    WebDriver driver;
 
-    protected MainPage mainPage;
-    protected ProductListPage productListPage;
+    protected AuthorizationPage authorizationPage;
+
+    protected String username;
+    protected String password;
+
 
     @BeforeTest
     public void setUpUi() {
         driver = Driver.getInstance().setWebDriver().getWebDriver();
-        mainPage = new MainPage();
-        productListPage = new ProductListPage();
+        authorizationPage = new AuthorizationPage();
+        username = getDataConfig().username();
+        password = getDataConfig().password();
+
     }
 
     @AfterTest
@@ -28,8 +34,5 @@ public abstract class UiBaseTest {
         Driver.getInstance().deleteWebDriver();
     }
 
-    @AfterMethod
-    public void resetApp() {
-        Driver.getInstance().getWebDriver().resetApp();
-    }
+
 }
