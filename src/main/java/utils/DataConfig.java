@@ -13,4 +13,8 @@ public interface DataConfig extends Config {
     @DefaultValue("defaultPassword")
     @Key("password")
     String password();
+
+    @DefaultValue("https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php")
+    @Key("url")
+    String url();
 }

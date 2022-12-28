@@ -25,10 +25,11 @@ Link to the result video: https://drive.google.com/file/d/1F397KR1Xq5vDhDsbFZ_Rn
 src - directory with project sources
     main - directory for project main infrastructure
         java
-            base - base ui 
-            pages - page object classes
-            resources - main resources
+            base - base ui(Driver class)
+            pages - page object classes + ErrorMessage class
             utils - utils
+            resources - main resources
+            
         
     test - directory for tests infrastructure
         java
@@ -40,3 +41,5 @@ target - directory where compiled files stored
 .gitignore - file with git extentions (files and folders not to be stored in git)
 pom.xml - file for Maven settings (dependencies, plugins, properties etc)
 ```
+If u have any questions or advices you can contact we:
+Telegram: @kupu_kupu_p

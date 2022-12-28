@@ -10,8 +10,6 @@ import static pages.ErrorMessage.*;
 @Listeners(TestAllureListener.class)
 public class AuthorizationTests extends UiBaseTest {
 
-    private final String url = "https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php";
-
     @Test(description = "Login to the website using invalid data")
     public void loginWithInvalidData() {
         driver.get(url);

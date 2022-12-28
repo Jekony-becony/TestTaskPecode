@@ -9,13 +9,11 @@ import pages.AuthorizationPage;
 
 import static utils.MainCoreDataManager.getDataConfig;
 
-
 @Slf4j
 public abstract class UiBaseTest {
-    WebDriver driver;
-
     protected AuthorizationPage authorizationPage;
-
+    protected String url;
+    protected WebDriver driver;
     protected String username;
     protected String password;
 
@@ -24,9 +22,9 @@ public abstract class UiBaseTest {
     public void setUpUi() {
         driver = Driver.getInstance().setWebDriver().getWebDriver();
         authorizationPage = new AuthorizationPage();
+        url = getDataConfig().url();
         username = getDataConfig().username();
         password = getDataConfig().password();
-
     }
 
     @AfterTest
