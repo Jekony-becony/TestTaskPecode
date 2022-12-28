@@ -2,6 +2,7 @@
 
 Test Task for some company(Contains of 5 ui tests(1 failed))<br />
 Link to the result video: https://drive.google.com/file/d/1F397KR1Xq5vDhDsbFZ_Rnh2aCIGBeBIw/view?usp=sharing
+Or you can see result in result package (screeenshots & video + test-cases for automated tests)
 
 ###### What to start with:
 
@@ -41,5 +42,5 @@ target - directory where compiled files stored
 .gitignore - file with git extentions (files and folders not to be stored in git)
 pom.xml - file for Maven settings (dependencies, plugins, properties etc)
 ```
-If u have any questions or advices you can contact we:
-Telegram: @kupu_kupu_p
+If u have any questions or advices you can contact me:
+<br/>Telegram: @kupu_kupu_p
