@@ -2,6 +2,7 @@
 
 Test Task for some company(Contains of 5 ui tests(1 failed))<br />
 Link to the result video: https://drive.google.com/file/d/1F397KR1Xq5vDhDsbFZ_Rnh2aCIGBeBIw/view?usp=sharing
+Or you can see result in result package (screeenshots & video)
 
 ###### What to start with:
 
