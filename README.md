@@ -42,5 +42,5 @@ target - directory where compiled files stored
 .gitignore - file with git extentions (files and folders not to be stored in git)
 pom.xml - file for Maven settings (dependencies, plugins, properties etc)
 ```
-If u have any questions or advices you can contact we:
-Telegram: @kupu_kupu_p
+If u have any questions or advices you can contact me:
+<br/>Telegram: @kupu_kupu_p
